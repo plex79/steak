@@ -1,0 +1,25 @@
+button.hamburger {
+    appearance: none;
+    outline: none;
+    .hamburger-box {
+        .hamburger-inner {
+            width: 30px;
+        }
+    } 
+    &.is-active {
+        .hamburger-box {
+            .hamburger-inner {
+                width: 40px;
+            }
+        } 
+    }
+     
+  }
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background-color: white;
+    height: 2px;
+}
+
+.hamburger-inner {
+    width: 40px;
+}

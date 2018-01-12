@@ -1,0 +1,36 @@
+@import 'partials/base';
+@import 'partials/header';
+@import 'partials/hamb';
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1920px;
+  }
+}
+
+main {
+  height: 100vh;
+  background-color: #0c0c0f;
+
+}
+
+// #section-aktualnosci {
+//   position: relative;
+//   .container {
+
+//   }
+// }
+// #section-aktualnosci::before {
+//   content: "";
+//   position: absolute;
+//   top: -151px;
+//   left: 0;
+//   background: url(../img/maz.png);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-attachment: scroll;
+//   background-size: cover;
+//   width: 100%;
+//   height: 151px;
+//   max-height: 151px;
+// }
