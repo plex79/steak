@@ -12,6 +12,11 @@
             app.initialize.init();
         }
     };
+    app.load = {
+        init: function () {
+            app.initialize.preloader();
+        }
+    };
 
     let wow = new WOW(
         {
@@ -21,14 +26,20 @@
             mobile:       true,       // trigger animations on mobile devices (default is true)
             live:         true,       // act on asynchronously loaded content (default is true)
             callback:     function(box) {
+                console.log(box);
+                
+                //let socialTitle = box.firstChild;
                 // the callback is fired every time an animation is started
                 // the argument that is passed in is the DOM node being animated
+                //console.log(socialTitle);
+                //console.log('----------------');
             },
             scrollContainer: null // optional scroll container selector, otherwise use window
         }
     );
 
     $(document).ready(app.ready.init);
+    $(window).on('load', app.load.init);
 
     app.initialize = {
 
@@ -37,8 +48,15 @@
             app.initialize.hamburg();
             app.initialize.bannerParalax();
             app.initialize.arrowScroll();
+            app.initialize.animSocial();
         },
         
+        preloader: function() {
+            console.log('zaladowano');
+            $('#preloader--stan').fadeOut(100);
+            $('#preloader').fadeOut(100);
+            //$('body').delay(350).css({'overflow':'visible'});
+        },
         hamburg: function() {
             let $hamburger = $(".hamburger");
             $hamburger.on("click", function(e) {
@@ -53,7 +71,8 @@
             // let height = movStr / windowH;
             // let width = movStr / windowW;
             let divs = $('#maska');
-            // let slogan = $('.slogan');
+            let slogan = $('.slogan');
+            let social = $('.social');
 
             // $("header").on('mousemove', function(e){
             //     let pageX = e.pageX - (windowW / 2);
@@ -67,7 +86,8 @@
             $(window).scroll(function () {
                 let percent = $(window).scrollTop() / $(window).outerHeight();
                 divs.css('opacity', 0 + percent);
-                //$('.slogan').css('opacity', 1 - percent);
+                slogan.css('opacity', 1 - percent);
+                social.css('opacity', 1 - percent);
             });
         },
         arrowScroll: function() {
@@ -80,6 +100,24 @@
                 }, 570);
             }
             setInterval(arrowUp,1000);
+        },
+        animSocial: function() {
+            let socialTitle = $('.social .title');
+            let socialline = $('.social .line');
+            let socialFb = $('.social .fb');
+            let socialInsta = $('.social .insta');
+            socialInsta.hide();
+            socialFb.hide();
+
+            socialTitle.on('webkitAnimationEnd mozAnimationEnd oAnimationEnd oanimationend animationend', function() {
+                socialline.css('max-height', '8rem'); 
+            });
+            socialline.on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function() {
+                socialFb.fadeIn(function() {
+                    socialInsta.fadeIn();
+                });
+            });
+
         }
     };
 

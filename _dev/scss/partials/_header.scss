@@ -4,7 +4,7 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: scroll;
     z-index: 100;
     #maska {
         background-color: #000;
@@ -21,29 +21,29 @@ header {
                 padding-top: 4rem;
                 .lang {
                     text-transform: uppercase;
-                    font-size: 2rem;
+                    font-size: 16px;
                     color: white;
                     font-weight: 200;
-                    padding-right: 3rem;
+                    padding-right: 30px;
                     a {
                         color: #fff;
-                        padding-bottom: .1rem;
-                        border-top: .1rem solid transparent;
-                        border-bottom: .1rem solid transparent;
+                        padding-bottom: 1px;
+                        border-top: 1px solid transparent;
+                        border-bottom: 1px solid transparent;
                         transition: all .3s;
                         text-decoration-line: none;
-                        line-height: .5rem;
+                        line-height: 5px;
                         &:hover {
-                            border-top: .1rem solid #fff;
-                            border-bottom: .1rem solid #fff;
+                            border-top: 1px solid #fff;
+                            border-bottom: 1px solid #fff;
                         }
                     }
                 }
             }
             .logo {
                 img {
-                width: 15rem;
-                height: 9.2rem;
+                width: 150px;
+                height: 92px;
                 }
             }
             .slogan {
@@ -54,28 +54,32 @@ header {
                 color: white;
                 text-align: center;
                 h1 {
-                    font-size: 5rem;
+                    font-size: 50px;
                     text-transform: uppercase;
                 }
                 h3 {
-                    font-size: 3rem;
+                    font-size: 30px;
                 }
             }
             .social {
+                .insta, .fb {
+                    
+                }
                 position: absolute;
-                right: 3rem;
-                bottom: calc(0rem + 10%);
-                width: 3rem;
+                right: 30px;
+                bottom: calc(0px + 10%);
+                width: 30px;
                 text-align: center;
                 a {
                     color: #fff;
                     display: inline-block;
-                    height: 3rem;
-                    width: 3rem;
+                    height: 30px;
+                    width: 30px;
                     transition: color .5s;
-                    margin-top: 1rem;
+                    margin-top: 10px;
                     i {
-                        font-size: 2rem;
+                        font-size: 20px;
+                        display: block;
                     }
                     &:hover {
                         color: rgba(255, 255, 255, 0.7);
@@ -85,21 +89,23 @@ header {
                     text-align: left;
                     white-space: nowrap;
                     vertical-align: middle;
-                    height: 7em;
+                    height: 80px;
+                    max-height: 0;
                     width: 16px;
                     border-right: 1px solid white;
                     margin-top: 20px;
+                    transition: all .5s cubic-bezier(0.420, 0.000, 0.580, 1.000);
                 }
                 .title {
                     text-align: left;
                     white-space: nowrap;
                     vertical-align: middle;
-                    height: 14rem;
+                    height: 140px;
                     .sm {
                         transform: rotate(-90deg);
-                        margin-left: -9rem;
-                        margin-right: -8.5rem;
-                        font-size: 2rem;
+                        margin-left: -90px;
+                        margin-right: -85px;
+                        font-size: 20px;
                         color: white;
                     }
                 }
@@ -120,7 +126,8 @@ header {
             left: 50%;
             transform: translateX(-50%);
         }
-    }
 
+    }
+   
   }
 
