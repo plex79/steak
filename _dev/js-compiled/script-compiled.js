@@ -27,7 +27,6 @@
         mobile: true, // trigger animations on mobile devices (default is true)
         live: true, // act on asynchronously loaded content (default is true)
         callback: function callback(box) {
-            console.log(box);
 
             //let socialTitle = box.firstChild;
             // the callback is fired every time an animation is started
@@ -44,11 +43,26 @@
     app.initialize = {
 
         init: function init() {
+
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true
+                },
+                navigation: {
+                    nextEl: '.swiper--next',
+                    prevEl: '.swiper--prev'
+                }
+            });
+
             wow.init();
             app.initialize.hamburg();
             app.initialize.bannerParalax();
             app.initialize.arrowScroll();
             app.initialize.animSocial();
+            app.initialize.litery();
         },
 
         preloader: function preloader() {
@@ -58,10 +72,12 @@
             //$('body').delay(350).css({'overflow':'visible'});
         },
         hamburg: function hamburg() {
-            var $hamburger = $(".hamburger");
-            $hamburger.on("click", function (e) {
-                $hamburger.toggleClass("is-active");
+            var hamburger = $(".hamburger");
+            var menuOverlay = $('.overlay');
+            hamburger.on("click", function (e) {
+                hamburger.toggleClass("is-active");
                 // something more
+                menuOverlay.toggleClass("open");
             });
         },
         bannerParalax: function bannerParalax() {
@@ -73,7 +89,8 @@
             var divs = $('#maska');
             var slogan = $('.slogan');
             var social = $('.social');
-
+            var arrow = $("#arrow-scroll");
+            var header = $('header');
             // $("header").on('mousemove', function(e){
             //     let pageX = e.pageX - (windowW / 2);
             //     let pageY = e.pageY - (windowH / 2);
@@ -88,6 +105,7 @@
                 divs.css('opacity', 0 + percent);
                 slogan.css('opacity', 1 - percent);
                 social.css('opacity', 1 - percent);
+                arrow.css('opacity', 1 - percent);
             });
         },
         arrowScroll: function arrowScroll() {
@@ -116,6 +134,14 @@
                 socialFb.fadeIn(function () {
                     socialInsta.fadeIn();
                 });
+            });
+        },
+        litery: function litery() {
+            $('.jq-sec1').waypoint(function (direction) {
+                if (direction == "down") {
+                    $('.jq-sec1-a').addClass('animated bounceInLeft');
+                }
+            }, { offset: '50%;'
             });
         }
     };

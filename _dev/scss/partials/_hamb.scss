@@ -1,6 +1,10 @@
 button.hamburger {
+    position: absolute;
+    left: 40px;
+    top: 50px;
     appearance: none;
-    outline: none;
+    outline: 0;
+    z-index: 999999;
     .hamburger-box {
         .hamburger-inner {
             width: 30px;

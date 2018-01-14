@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/hamburgers.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+    
 </head>
 <body>
 <!-- <div id="preloader">
@@ -20,15 +22,18 @@
 <div class="wrapper">
 <header>
         <div id="maska"></div>
+
+        <button class="hamburger hamburger--vortex wow bounceInDown" data-wow-delay="1s" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
         <section id="section-banner">
             <div class="container-fluid">
                 <div class="row menu">
                     <div class="col">
-                        <button class="hamburger hamburger--vortex wow bounceInDown" data-wow-delay="1s" type="button">
-                            <span class="hamburger-box">
-                                <span class="hamburger-inner"></span>
-                            </span>
-                        </button>
+                        
                     </div>
                     <div class="col text-center">
                         <div class="logo">
@@ -51,81 +56,91 @@
             </div>
             <a id="arrow-scroll"></a>
         </section>
-        <div class="maz"></div>
+
+        <div class="overlay overlay-slidedown">
+			
+			<nav>
+				<ul>
+					<li><a href="#">Aktualności</a></li>
+					<li><a href="#">O nas</a></li>
+					<li><a href="#">Menu</a></li>
+					<li><a href="#">Galeria</a></li>
+					<li><a href="#">Kontakt</a></li>
+				</ul>
+			</nav>
+		</div>
 </header>
 
 <main>
-        <section id="section-aktualnosci">
-            <div class="container">
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                
-                <div class="ddd"></div>
+        <section id="section-aktualnosci" class="jq-sec1">
+            <div class="letter-a jq-sec1-a"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                            <div class="row">
+                                <div class="col-4"></div>
+                                <div class="col-7">
+                                    <p class="cat--header">Aktualności</p>
+                                    <div class="akt--content">
+                                        <p class="icon"><i class="icon ion-calendar"></i>01/01/2018</p>
+                                        <p class="title">Lorem, ipsum dolor.</p>
+                                        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                    </div>
+                                    <div>
+                                        <div class="swiper-nav">
+                                            <div class="swiper--prev"><i class="icon ion-android-arrow-back"></i></div>
+                                            <div class="swiper--next"><i class="icon ion-android-arrow-forward"></i></div>
+                                            <span class="icon-arrow-right"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-1"></div>
+                            </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><a><img src="img/ak-01.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-02.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-03.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-01.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-02.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-03.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-01.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-02.jpg" alt="ak-01"></a></div>
+                                <div class="swiper-slide"><a><img src="img/ak-03.jpg" alt="ak-01"></a></div>
 
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>asdasd</p>
-                <p>zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+                            </div>
+                            <!-- Add Pagination -->
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
+                    <p>sdfdsfsdf</p>
             </div>
         </section>
 </main>
@@ -133,8 +148,12 @@
 </div>
 
 
+
 <script src="http://localhost:35729/livereload.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="js/swiper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/all.min.js"></script>

@@ -1,6 +1,9 @@
 @import 'partials/base';
 @import 'partials/header';
 @import 'partials/hamb';
+@import 'partials/menu';
+@import 'partials/slider';
+@import 'partials/sect_aktual';
 
 @media screen and (min-width: 1440px) {
   .container {
@@ -45,7 +48,7 @@ main {
     transform-origin: top left;
     transform: skewY(0deg);
     /* background-color: blanchedalmond; */
-    z-index: 999;
+    // z-index: 999;
 } 
 }
 

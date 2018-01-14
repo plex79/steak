@@ -26,8 +26,7 @@
             mobile:       true,       // trigger animations on mobile devices (default is true)
             live:         true,       // act on asynchronously loaded content (default is true)
             callback:     function(box) {
-                console.log(box);
-                
+               
                 //let socialTitle = box.firstChild;
                 // the callback is fired every time an animation is started
                 // the argument that is passed in is the DOM node being animated
@@ -44,11 +43,26 @@
     app.initialize = {
 
         init: function () {
+
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 'auto',
+                spaceBetween: 30,
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper--next',
+                    prevEl: '.swiper--prev',
+                  }
+              });
+
             wow.init();
             app.initialize.hamburg();
             app.initialize.bannerParalax();
             app.initialize.arrowScroll();
             app.initialize.animSocial();
+            app.initialize.litery();
         },
         
         preloader: function() {
@@ -58,10 +72,12 @@
             //$('body').delay(350).css({'overflow':'visible'});
         },
         hamburg: function() {
-            let $hamburger = $(".hamburger");
-            $hamburger.on("click", function(e) {
-                $hamburger.toggleClass("is-active");
+            let hamburger = $(".hamburger");
+            let menuOverlay = $('.overlay');
+            hamburger.on("click", function(e) {
+                hamburger.toggleClass("is-active");
                 // something more
+                menuOverlay.toggleClass("open");
             });
         },
         bannerParalax: function () {
@@ -73,7 +89,8 @@
             let divs = $('#maska');
             let slogan = $('.slogan');
             let social = $('.social');
-
+            let arrow = $("#arrow-scroll");
+            let header = $('header');
             // $("header").on('mousemove', function(e){
             //     let pageX = e.pageX - (windowW / 2);
             //     let pageY = e.pageY - (windowH / 2);
@@ -82,12 +99,13 @@
             //     //slogan.css("transform", "translate("+newvalueX+"% ,"+newvalueY+"%)");
             // });
 
-            
+           
             $(window).scroll(function () {
                 let percent = $(window).scrollTop() / $(window).outerHeight();
                 divs.css('opacity', 0 + percent);
                 slogan.css('opacity', 1 - percent);
                 social.css('opacity', 1 - percent);
+                arrow.css('opacity', 1 - percent);
             });
         },
         arrowScroll: function() {
@@ -118,6 +136,14 @@
                 });
             });
 
+        },
+        litery: function() {
+            $('.jq-sec1').waypoint(function(direction){
+                if(direction=="down") {
+                    $('.jq-sec1-a').addClass('animated bounceInLeft');
+                } 
+            }, { offset: '50%;'
+            });
         }
     };
 
