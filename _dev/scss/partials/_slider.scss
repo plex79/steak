@@ -16,8 +16,21 @@
   }
 }
 
-.slider-slide a img {
+.slider-slide {
+  margin: 20px 5px;
+}
+.slider-slide img {
   width: 90%;
   max-width: 100%;
   height: auto;
+  opacity: .6;
+  transition: 0.3s ease-in-out all;
+  }
+.slick-slide {
+  transform: scale(1);
 }
+.slick-center .slider-slide img{
+  opacity: 1;
+  transform: scale(1.08);
+}
+

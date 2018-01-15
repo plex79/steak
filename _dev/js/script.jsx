@@ -141,7 +141,7 @@
             $('.akt--list').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: false,
+                infinite: true,
                 dots:false,
                 arrows: false,
                 fade: true,
@@ -151,11 +151,13 @@
           $('.slider-wrapper').slick({
             dots: false,
             arrows: false,
-            infinite: false,
+            infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.akt--list',
-            responsive: [
+            centerMode: true,
+            centerPadding: '12%',
+             responsive: [
                 {
                 breakpoint: 1024,
                 settings: {
