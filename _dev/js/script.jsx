@@ -43,26 +43,13 @@
     app.initialize = {
 
         init: function () {
-
-            var swiper = new Swiper('.swiper-container', {
-                slidesPerView: 'auto',
-                spaceBetween: 30,
-                pagination: {
-                  el: '.swiper-pagination',
-                  clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper--next',
-                    prevEl: '.swiper--prev',
-                  }
-              });
-
             wow.init();
             app.initialize.hamburg();
             app.initialize.bannerParalax();
             app.initialize.arrowScroll();
             app.initialize.animSocial();
             app.initialize.litery();
+            app.initialize.slider();
         },
         
         preloader: function() {
@@ -98,7 +85,6 @@
             //     let newvalueY = height * pageY * -1 - 50;
             //     //slogan.css("transform", "translate("+newvalueX+"% ,"+newvalueY+"%)");
             // });
-
            
             $(window).scroll(function () {
                 let percent = $(window).scrollTop() / $(window).outerHeight();
@@ -144,6 +130,65 @@
                 } 
             }, { offset: '50%;'
             });
+        },
+        slider: function() {
+            $('.slider__leftArrow').on('click', function(){
+                $('.akt--list').slick("slickPrev");
+            });
+            $('.slider__rightArrow').on('click', function(){
+                $('.akt--list').slick("slickNext");
+            });
+            $('.akt--list').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                dots:false,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-wrapper'
+            });
+
+          $('.slider-wrapper').slick({
+            dots: false,
+            arrows: false,
+            infinite: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.akt--list',
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    arrows: false,
+                    dots: false
+                }
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    dots: false
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+          });
         }
     };
 

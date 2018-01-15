@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="css/hamburgers.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
     <link rel="stylesheet" href="css/style.min.css">
     
 </head>
@@ -76,21 +77,52 @@
             <div class="letter-a jq-sec1-a"></div>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-5">
                             <div class="row">
                                 <div class="col-4"></div>
                                 <div class="col-7">
-                                    <p class="cat--header">Aktualności</p>
-                                    <div class="akt--content">
-                                        <p class="icon"><i class="icon ion-calendar"></i>01/01/2018</p>
-                                        <p class="title">Lorem, ipsum dolor.</p>
-                                        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                    <p class="cat--header">News</p>
+                                    <div class="akt--list">
+                                        <div class="akt--content">
+                                            <p class="icon"><i class="icon ion-calendar"></i>01/01/2018</p>
+                                            <p class="title">Lorem, ipsum dolor.</p>
+                                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                        </div>
+                                        <div class="akt--content">
+                                            <p class="icon"><i class="icon ion-calendar"></i>02/01/2018</p>
+                                            <p class="title">Lorem ipsum dolor sit.</p>
+                                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                        </div>
+                                        <div class="akt--content">
+                                            <p class="icon"><i class="icon ion-calendar"></i>03/01/2018</p>
+                                            <p class="title">Ipsum dolor.</p>
+                                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                        </div>
+                                        <div class="akt--content">
+                                            <p class="icon"><i class="icon ion-calendar"></i>04/01/2018</p>
+                                            <p class="title">Lorem, ipsum dolor 4.</p>
+                                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                        </div>
+                                        <div class="akt--content">
+                                            <p class="icon"><i class="icon ion-calendar"></i>05/01/2018</p>
+                                            <p class="title">Lorem, ipsum dolor 5.</p>
+                                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                        </div>
+                                        <div class="akt--content">
+                                            <p class="icon"><i class="icon ion-calendar"></i>06/01/2018</p>
+                                            <p class="title">Lorem, ipsum dolor 6.</p>
+                                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                        </div>
+                                        <div class="akt--content">
+                                            <p class="icon"><i class="icon ion-calendar"></i>07/01/2018</p>
+                                            <p class="title">Lorem, ipsum dolor 7.</p>
+                                            <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In dignissimos alias, maxime ut nulla eveniet corporis molestiae quibusdam commodi provident?</p>
+                                        </div>
                                     </div>
                                     <div>
-                                        <div class="swiper-nav">
-                                            <div class="swiper--prev"><i class="icon ion-android-arrow-back"></i></div>
-                                            <div class="swiper--next"><i class="icon ion-android-arrow-forward"></i></div>
-                                            <span class="icon-arrow-right"></span>
+                                        <div class="slider-nav">
+                                                <button class="slider__leftArrow"><i class="icon ion-android-arrow-back"></i></button>
+                                                <button class="slider__rightArrow"><i class="icon ion-android-arrow-forward"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -98,18 +130,15 @@
                             </div>
                     </div>
                     <div class="col-7">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide"><a><img src="img/ak-01.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-02.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-03.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-01.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-02.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-03.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-01.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-02.jpg" alt="ak-01"></a></div>
-                                <div class="swiper-slide"><a><img src="img/ak-03.jpg" alt="ak-01"></a></div>
-
+                        <div class="slider-container">
+                            <div class="slider-wrapper">
+                                <div class="slider-slide"><a class="slajd"><img src="img/ak-01.jpg" alt="ak-01"></a></div>
+                                <div class="slider-slide"><a class="slajd"><img src="img/ak-02.jpg" alt="ak-01"></a></div>
+                                <div class="slider-slide"><a class="slajd"><img src="img/ak-03.jpg" alt="ak-01"></a></div>
+                                <div class="slider-slide"><a class="slajd"><img src="img/ak-01.jpg" alt="ak-01"></a></div>
+                                <div class="slider-slide"><a class="slajd"><img src="img/ak-02.jpg" alt="ak-01"></a></div>
+                                <div class="slider-slide"><a class="slajd"><img src="img/ak-03.jpg" alt="ak-01"></a></div>
+                                <div class="slider-slide"><a class="slajd"><img src="img/ak-01.jpg" alt="ak-01"></a></div>
                             </div>
                             <!-- Add Pagination -->
                             
@@ -151,6 +180,7 @@
 
 <script src="http://localhost:35729/livereload.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slick.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="js/swiper.min.js"></script>
