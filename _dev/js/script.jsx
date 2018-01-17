@@ -182,6 +182,13 @@
             }, { offset: '50%;'
             });
 
+            $('.jq-sec2').waypoint(function(direction){
+                if(direction=="down") {
+                    $('.jq-sec2-o').addClass('animated bounceInRight');
+                } 
+            }, { offset: '80%;'
+            });
+
         },
         slider: function() {
             $('.slider__leftArrow').on('click', function(){
@@ -247,16 +254,9 @@
                 ]
             });
 
-            //slider o nas
-            $('.slider-wrapper-o-nas').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots:false,
-                arrows: false,
-                fade: true,
-                autoplay: true,
-                autoplaySpeed: 2000
+            //slider menu
+            $('.slider-menu .menu-item').slick({
+                dots: true
             });
         }
     };
