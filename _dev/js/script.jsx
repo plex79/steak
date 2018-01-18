@@ -443,10 +443,11 @@
 
                 let map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
+                
                 let marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
-                    icon: "http://www.villapalladium.pl/images/marker.png",
+                    icon: "../img/marker.png",
                     title: "Steak Master"
                 });
 

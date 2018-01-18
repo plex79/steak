@@ -404,7 +404,7 @@
                 var marker = new google.maps.Marker({
                     position: myLatlng,
                     map: map,
-                    icon: "http://www.villapalladium.pl/images/marker.png",
+                    icon: "../img/marker.png",
                     title: "Steak Master"
                 });
 
