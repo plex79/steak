@@ -51,6 +51,9 @@
             app.initialize.animSocial();
             app.initialize.litery();
             app.initialize.slider();
+            app.initialize.mapWidth();
+            app.initialize.supportMap();
+            app.initialize.galeria();
         },
         
         menu: function() {
@@ -110,6 +113,9 @@
         },
         preloader: function() {
             console.log('zaladowano');
+            $("#gal-lokal").click();
+            $("#gal-lokal").addClass("active");
+
             $('#preloader--stan').fadeOut(100);
             $('#preloader').fadeOut(100);
             //$('body').delay(350).css({'overflow':'visible'});
@@ -189,6 +195,34 @@
             }, { offset: '80%;'
             });
 
+            $('.jq-sec2-img').waypoint(function(direction){
+                if(direction=="down") {
+                    $('.smiglo').addClass('animated slideInLeft');
+                } 
+            }, { offset: '60%;'
+            });
+
+            $('.jq-sec2-img').waypoint(function(direction){
+                if(direction=="down") {
+                    $('.mieso').addClass('animated slideInRight');
+                } 
+            }, { offset: '80%;'
+            });
+
+            $('.jq-sec3').waypoint(function(direction){
+                if(direction=="down") {
+                    $('.jq-sec3-m').addClass('animated bounceInLeft');
+                } 
+            }, { offset: '80%;'
+            });
+
+            $('.jq-sec4').waypoint(function(direction){
+                if(direction=="down") {
+                    $('.jq-sec4-g').addClass('animated bounceInRight');
+                } 
+            }, { offset: '80%;'
+            });
+
         },
         slider: function() {
             $('.slider__leftArrow').on('click', function(){
@@ -222,14 +256,14 @@
                     settings: {
                         slidesToShow: 2,
                         slidesToScroll: 1,
-                        centerMode: false,
+                        centerMode: true,
                         infinite: true,
                         arrows: false,
                         dots: false
                     }
                     },
                     {
-                    breakpoint: 720,
+                    breakpoint: 768,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
@@ -266,7 +300,185 @@
                 arrows: false,
                 dots: false
             });
-        }
+        },
+        mapWidth: function () {
+            let contactWrapper = $('.contactWrapper');
+            let mapWrapper = $('.mapWrapper');
+
+            function calculateMapWidth() {
+                let windowWidth = $(window).width();
+                if ($(window).width() >= 992) {
+                    mapWrapper.css('min-width', windowWidth - contactWrapper.outerWidth());
+                } else {
+                    mapWrapper.css('min-width', 'inherit');
+                }
+            }
+
+            calculateMapWidth();
+
+            $(window).on('resize', function () {
+                calculateMapWidth();
+            })
+        },
+        supportMap: function() {
+            $().ready(function() {
+
+                let styles = [
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "color": "#FFFFFF"
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.man_made",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "color": "#303030"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape.natural",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "color": "#000000"
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "color": "#FFFFFF"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            },
+                            {
+                                "color": "#808080"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "color": "#FFFFFF"
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "color": "#303030"
+                            }
+                        ]
+                    }
+                ];
+                let myLatlng = new google.maps.LatLng(54.417138, 18.559109);
+                let posLatlng = new google.maps.LatLng(54.417138, 18.559109);
+                let mapOptions = {
+                    zoom: 16,
+                    center: posLatlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    disableDefaultUI: !0,
+                    zoomControl: !0,
+                    disableDoubleClickZoom: 0,
+                    panControl: !1,
+                    scrollwheel: !1,
+                    mapTypeControl: !1,
+                    scaleControl: !0,
+                    streetViewControl: !1,
+                    overviewMapControl: !1,
+                    zoomControlOptions: {style: google.maps.ZoomControlStyle.LARGE, position: google.maps.ControlPosition.LEFT_CENTER}}
+
+                let map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+                let marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    icon: "http://www.villapalladium.pl/images/marker.png",
+                    title: "Steak Master"
+                });
+
+                map.setOptions({styles: styles});
+
+            });
+        },
+        galeria: function() {
+            console.log('gggg');
+            $(".filter-button").click(function(){
+                var value = $(this).attr('data-filter');
+                
+                $(".filter-button").removeClass("active");
+                $(this).addClass("active");
+
+                if(value == "all")
+                {
+                    //$('.filter').removeClass('hidden');
+                    $('.filter').show('2000');
+                }
+                else
+                {
+        //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+        //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                    $(".filter").not('.'+value).hide('3000');
+                    $('.filter').filter('.'+value).show('3000');
+                    
+                }
+            });
+            
+
+            }
     };
 
 

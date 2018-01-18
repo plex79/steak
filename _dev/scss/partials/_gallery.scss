@@ -1,0 +1,96 @@
+#galeria {
+    position: relative;
+    .letter-g {
+        opacity: 0;
+        position: absolute;
+        top: -100px;
+        right: -150px;
+        content: "";
+        width: 100%;
+        height: 100%;
+        max-height: 513px;
+        max-width: 309px;
+        background: url(../img/o.png);
+        &.animated {
+            opacity: 1;
+        }
+    }
+    margin-top: 100px;
+    .gallery {
+        display: flex;
+        align-items: center;
+        p.cat--header {
+            font-size: 60px;
+            color: #75411e;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+            /* margin-bottom: 40px; */
+            /* margin-top: 40px; */
+            /* display: inline-block; */
+        }
+        .cat--category {
+            flex: 1 1 auto;
+        }
+        
+    }
+    
+}
+
+.row.gallery-wrapper {
+    padding-right: 450px;
+} 
+    
+.filter-button
+{
+    font-size: 18px;
+    border: none;
+    text-align: center;
+    color: white;
+    background: transparent;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.filter-button:hover
+{
+    cursor: pointer;
+}
+.filter-button.active
+{
+    color: #ab6a3f;
+}
+
+button#gal-lokal{
+    border-top: 0;
+    border-bottom: 0;
+    border-left: 1px;
+    border-right: 1px;
+    border-color: rgba(255,255,255, .4); 
+    border-style: solid;
+}
+.port-image
+{
+    width: 100%;
+}
+
+.gallery_product
+{
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    transition: transform .5s ease-in-out;
+    &:hover {
+        transform: scale(1.08);
+        z-index: 9;
+        img {
+            opacity: 1;
+        }
+    }
+    img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #64381b;
+    opacity: .5;
+    }
+
+}

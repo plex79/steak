@@ -1,0 +1,115 @@
+#kontakt {
+  position: relative;
+  overflow: hidden;
+
+  color: #fff;
+  padding-bottom: 100px;
+  margin-top: 100px;
+  .logo {
+    margin-bottom: 50px;
+  
+    .logoWrapper {
+      margin: 20px auto;
+      max-width: 200px;
+      text-align: center;
+    }
+  }
+
+  .noWrap {
+    @media (min-width: 768px) {
+      flex-wrap: nowrap;
+    }
+
+    &.contactRow {
+      @media (min-width: 768px) {
+        align-items: center;
+      }
+
+      .contactWrapper {
+        opacity: .6;
+        .addressData {
+          margin: 40px 0;
+          padding: 40px 20px;
+          border-top: 1px solid rgba(255, 255, 255, 0.4);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+          .contact {
+            
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 992px) {
+              flex-direction: row;
+            }
+
+            span {
+              &:first-child {
+                min-width: 200px;
+              }
+              &+span {
+                color: #ff6c00ed;
+                display: flex;
+                flex-direction: column;
+              }
+            }
+          }
+
+          .hours {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 992px) {
+              flex-direction: row;
+            }
+
+            span {
+
+              &:nth-child(1) {
+                min-width: 200px;
+              }
+
+              &:nth-child(2) {
+                span {
+                  display: block;
+                  color: #ff6c00ed;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mapWrapper {
+    @media (min-width: 768px) {
+      overflow: visible;
+      position: relative;
+      padding-right: 0;
+    }
+
+    .map {
+      #map-canvas {
+        width: 100%;
+        height: 400px;
+      }
+    }
+  }
+  &:before {
+
+      content: ' ';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.6;
+      background-image: url('../img/tlo-stopka.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+
+  }
+}

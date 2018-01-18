@@ -22,6 +22,49 @@
             width: 30rem;
             max-width: 45%;
         }
+        .slider-nav {
+            span {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 40px;
+                color: #fff;
+                border: none;
+                height: 50px;
+                box-shadow: inset 0 0 17px 2px rgba(0,0,0,.75);
+                cursor: pointer;
+            }
+            .slider__leftArrow {
+                background-image: url('../img/guzik-tlo.png');
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                margin-right: 5px;
+                transition: transform .4s;
+                &:hover {
+                    transform: translateY(-5px);
+                    .icon {
+                        
+                    }
+                }
+                
+            }
+
+            .slider__rightArrow {
+                background-color: #1b1917;
+                transition: transform .4s;
+                &:hover {
+                    transform: translateY(-5px);
+                    .icon {
+                        
+                    }
+                }
+
+                
+            }
+        }
+
         .akt--content {
             font-weight: normal;
             color: white;
@@ -37,12 +80,12 @@
         opacity: 0;
         position: absolute;
         top: -100px;
-        left: -150px;
+        left: -160px;
         content: "";
         width: 100%;
         height: 100%;
-        max-height: 477px;
-        max-width: 285px;
+        max-height: 511px;
+        max-width: 315px;
         background: url(../img/a.png);
         &.animated {
             opacity: 1;
@@ -53,5 +96,124 @@
         &.animated{
             opacity: 1;
         }
+    }
+}
+
+
+
+
+@media screen and (max-width: 576px) {
+    .news-text {
+        position: relative !important;
+    }
+    #slider-fot {
+        display: none;
+    }
+    #section-aktualnosci .about-large .news-text .akt--list {
+        width: 100% !important;
+        max-width: 500px !important;
+    }
+
+    .akt--content {
+        max-width: 500px !important;
+        width: 100% !important;
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    #section-aktualnosci {
+        padding-bottom: 150px;
+        .about-large {
+            position: relative;
+            .news-text {
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+        }
+        div.container {
+            padding-right: 0;
+            padding-top: 0;
+            .cat--header {
+                font-size: 40px;
+                color: #75411e;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            .akt--list {
+                width: 30rem;
+                max-width: 40% !important;
+            }
+            .akt--content {
+                font-weight: normal;
+                color: white;
+                i {
+                    margin-right: 10px;
+                }
+                .title {
+                    font-size: 30px;
+                }
+            }
+   
+
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 1440px){
+    #section-aktualnosci {
+        padding-bottom: 150px;
+        .about-large {
+            position: relative;
+            .news-text {
+                position: absolute;
+                left: 0;
+                right: 0;
+            }
+        }
+        div.container {
+            padding-right: 0;
+            padding-top: 0;
+            .cat--header {
+                font-size: 40px;
+                color: #75411e;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            .akt--list {
+                width: 30rem;
+                max-width: 45%;
+            }
+            .akt--content {
+                font-weight: normal;
+                color: white;
+                i {
+                    margin-right: 10px;
+                }
+                .title {
+                    font-size: 30px;
+                }
+            }
+   
+
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 1600px){
+    #section-aktualnosci {
+        padding-bottom: 150px;
+       
+        .letter-a {
+            display: none;
+        }
+
     }
 }

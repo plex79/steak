@@ -54,11 +54,11 @@ header {
                 color: white;
                 text-align: center;
                 h1 {
-                    font-size: 50px;
+                    font-size: 40px;
                     text-transform: uppercase;
                 }
                 h3 {
-                    font-size: 30px;
+                    font-size: 25px;
                 }
             }
             .social {
@@ -131,3 +131,71 @@ header {
    
   }
 
+@media screen and (min-width: 992px) {
+    header {
+        #section-banner {
+            .container-fluid {
+                .slogan {
+                    h1 {
+                        font-size: 40px;
+                    }
+                    h3 {
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    header {
+        #section-banner {
+            .container-fluid {
+                .slogan {
+                    h1 {
+                        font-size: 50px;
+                    }
+                    h3 {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px){
+    header {
+        #section-banner {
+            .container-fluid {
+                .slogan {
+                    h1 {
+                        font-size: 60px;
+                    }
+                    h3 {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px){
+    header {
+        #section-banner {
+            .container-fluid {
+                .slogan {
+                    h1 {
+                        font-size: 80px;
+                    }
+                    h3 {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
