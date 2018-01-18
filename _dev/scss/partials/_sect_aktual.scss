@@ -120,6 +120,12 @@
     // }
 }
 
+@media screen and (max-width: 992px){
+    #section-aktualnosci {
+        padding-bottom: 200px !important;
+    }
+}
+
 @media screen and (max-width: 768px){
     #section-aktualnosci {
         padding-bottom: 50px !important;
@@ -140,16 +146,9 @@
     }
 }
 
-@media screen and (max-width: 962px){
-    #section-aktualnosci {
-        padding-bottom: 150px !important;
-    }
-}
-
-
 @media screen and (max-width: 1200px){
     #section-aktualnosci {
-        padding-bottom: 150px;
+        padding-bottom: 100px;
         .about-large {
             position: relative;
             .news-text {
