@@ -255,8 +255,16 @@
             });
 
             //slider menu
+            $('.slider__menu-leftArrow').on('click', function(){
+                $('.menu-item').slick("slickPrev");
+            });
+            $('.slider__menu-rightArrow').on('click', function(){
+                $('.menu-item').slick("slickNext");
+            });
+
             $('.slider-menu .menu-item').slick({
-                dots: true
+                arrows: false,
+                dots: false
             });
         }
     };
