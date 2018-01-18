@@ -19,8 +19,8 @@
             margin-bottom: 80px;
         }
         .akt--list {
-            width: 30rem;
-            max-width: 45%;
+            // width: 30rem;
+            // max-width: 45%;
         }
         .slider-nav {
             span {
@@ -103,20 +103,46 @@
 
 
 @media screen and (max-width: 576px) {
+    // .news-text {
+    //     position: relative !important;
+    // }
+    // #slider-fot {
+    //     display: none;
+    // }
+    // #section-aktualnosci .about-large .news-text .akt--list {
+    //     width: 100% !important;
+    //     max-width: 500px !important;
+    // }
+
+    // .akt--content {
+    //     max-width: 500px !important;
+    //     width: 100% !important;
+    // }
+}
+
+@media screen and (max-width: 768px){
+    #section-aktualnosci {
+        padding-bottom: 50px !important;
+    }
     .news-text {
         position: relative !important;
     }
     #slider-fot {
         display: none;
     }
-    #section-aktualnosci .about-large .news-text .akt--list {
-        width: 100% !important;
-        max-width: 500px !important;
+    .slider-slide img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 350px;
+        opacity: .6;
+        transition: .3s ease-in-out all;
     }
+}
 
-    .akt--content {
-        max-width: 500px !important;
-        width: 100% !important;
+@media screen and (max-width: 962px){
+    #section-aktualnosci {
+        padding-bottom: 150px !important;
     }
 }
 
@@ -142,10 +168,10 @@
                 text-transform: uppercase;
                 margin-bottom: 30px;
             }
-            .akt--list {
-                width: 30rem;
-                max-width: 40% !important;
-            }
+            // .akt--list {
+            //     width: 30rem;
+            //     max-width: 40% !important;
+            // }
             .akt--content {
                 font-weight: normal;
                 color: white;
@@ -185,10 +211,10 @@
                 text-transform: uppercase;
                 margin-bottom: 30px;
             }
-            .akt--list {
-                width: 30rem;
-                max-width: 45%;
-            }
+            // .akt--list {
+            //     width: 30rem;
+            //     max-width: 45%;
+            // }
             .akt--content {
                 font-weight: normal;
                 color: white;

@@ -38,7 +38,7 @@
 }
 
 .row.gallery-wrapper {
-    padding-right: 450px;
+    padding-right: 0;
 } 
     
 .filter-button
@@ -93,4 +93,19 @@ button#gal-lokal{
     opacity: .5;
     }
 
+}
+
+@media screen and (max-width: 1600px){
+    #galeria {
+        .letter-g {
+            display: none;
+        }
+
+    }
+}
+
+@media screen and (min-width: 1600px){
+    .row.gallery-wrapper {
+        padding-right: 20%;
+    } 
 }

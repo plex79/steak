@@ -249,7 +249,7 @@
                 responsive: [{
                     breakpoint: 960,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 3,
                         slidesToScroll: 1,
                         centerMode: true,
                         infinite: true,
@@ -406,6 +406,11 @@
                     map: map,
                     icon: "http://www.villapalladium.pl/images/marker.png",
                     title: "Steak Master"
+                });
+
+                var center = map.getCenter();
+                google.maps.event.addDomListener(window, 'resize', function () {
+                    map.setCenter(center);
                 });
 
                 map.setOptions({ styles: styles });

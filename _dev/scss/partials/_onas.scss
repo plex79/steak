@@ -52,7 +52,7 @@
     .smiglo {
         opacity: 0;
         &.animated {
-            opacity: 1;
+            opacity: .7;
         }
     }
     .smiglo img {
@@ -60,7 +60,7 @@
     .mieso {
         opacity: 0;
         &.animated {
-            opacity: 1;
+            opacity: .7;
         }
     }
     .mieso img {
@@ -75,13 +75,73 @@
             order: 1;
         }
         #onas-text {
-            padding-left: 0;
+            padding-left: 15px;
             order: 0;
         }
         .letter-o {
             display: none;
         }
 
+    }
+    #o-nas-img {
+        margin-top: 30px;
+    }
+}
+
+
+@media screen and (max-width: 1440px){
+    #o-nas {
+        position: relative;
+        .im-o-nas {
+    
+            img{
+                display: block;
+            }
+        }
+        .o-nas-text {
+            p.cat--header {
+                font-size: 40px;
+                color: #75411e;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+            .o-nas--content {
+                font-weight: normal;
+                color: white;
+                .title {
+                    font-size: 30px;
+                }
+                .text {
+                    
+                }
+            }
+        }
+        
+    }
+    
+    #o-nas-img {
+        .container-fluid {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .smiglo {
+            opacity: 0;
+            &.animated {
+                opacity: 1;
+            }
+        }
+        .smiglo img {
+        }
+        .mieso {
+            opacity: 0;
+            &.animated {
+                opacity: 1;
+            }
+        }
+        .mieso img {
+            float: right;
+        }
     }
 }
 
