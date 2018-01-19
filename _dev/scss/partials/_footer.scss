@@ -101,6 +101,12 @@
             justify-content: space-between;
             a {
               color: white;
+              transition: all .4s;
+              &:hover {
+                color: #ff6c00ed;
+                text-decoration-style: none;
+                text-decoration-line: none;
+              }
             }
           }
           .addressMenuSocial {
@@ -110,10 +116,15 @@
             justify-content: flex-end;
             a {
               color: white;
+              transition: all .4s;
               i {
                 font-size: 24px;
                 margin-left: 20px;
                 line-height: 24px;
+              }
+              &:hover {
+                color: #ff6c00ed;
+
               }
             }
           }
