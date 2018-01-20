@@ -5,12 +5,6 @@
         position: absolute;
         top: -100px;
         right: -150px;
-        content: "";
-        width: 100%;
-        height: 100%;
-        max-height: 513px;
-        max-width: 309px;
-        background: url(../img/o.png);
         &.animated {
             opacity: 1;
         }
@@ -95,6 +89,37 @@ button#gal-lokal{
     }
 
 }
+
+@media screen and (max-width: 728px){ 
+    .filter-button
+    {
+        font-size: 16px;
+        border: none;
+        text-align: center;
+        color: white;
+        background: transparent;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .filter-button:hover
+    {
+        cursor: pointer;
+    }
+    .filter-button.active
+    {
+        color: #ab6a3f;
+    }
+    
+    button#gal-lokal{
+        border-top: 0;
+        border-bottom: 0;
+        border-left: 1px;
+        border-right: 1px;
+        border-color: rgba(255,255,255, .4); 
+        border-style: solid;
+    }
+}
+
 @media screen and (max-width: 992px){ 
     #galeria {
         position: relative;
@@ -103,12 +128,6 @@ button#gal-lokal{
             position: absolute;
             top: -100px;
             right: -150px;
-            content: "";
-            width: 100%;
-            height: 100%;
-            max-height: 513px;
-            max-width: 309px;
-            background: url(../img/o.png);
             &.animated {
                 opacity: 1;
             }
@@ -144,12 +163,6 @@ button#gal-lokal{
             position: absolute;
             top: -100px;
             right: -150px;
-            content: "";
-            width: 100%;
-            height: 100%;
-            max-height: 513px;
-            max-width: 309px;
-            background: url(../img/o.png);
             &.animated {
                 opacity: 1;
             }

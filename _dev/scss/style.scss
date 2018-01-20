@@ -24,6 +24,7 @@ main {
   background-position: center top; 
   background-size: cover;
   position: relative;
+  overflow-x: hidden;
   &:before {
 
     position: absolute;

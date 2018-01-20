@@ -27,3 +27,48 @@ button.hamburger {
 .hamburger-inner {
     width: 40px;
 }
+
+
+@media screen and (max-width: 728px) {
+    button.hamburger {
+        position: absolute;
+        left: 10px;
+        top: 20px;
+        appearance: none;
+        outline: 0;
+        z-index: 999999;
+        .hamburger-box {
+            .hamburger-inner {
+                width: 20px;
+                &:before {
+                    width: 30px;
+                }
+                &:after {
+                    width: 30px;
+                }
+            }
+        } 
+        &.is-active {
+            .hamburger-box {
+                .hamburger-inner {
+                    width: 30px;
+                    &:before {
+                        width: 30px;
+                    }
+                    &:after {
+                        width: 30px;
+                    }
+                }
+            } 
+        }
+         
+      }
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+        background-color: white;
+        height: 2px;
+    }
+    
+    .hamburger-inner {
+        width: 20px;
+    }
+}

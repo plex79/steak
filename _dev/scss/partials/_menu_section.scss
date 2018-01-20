@@ -196,7 +196,141 @@
 
 }
 
-
+@media screen and (max-width: 728px){
+    #menu {
+        .letter-m {
+            display: none;
+        }
+        .img-container {
+            position: relative;
+            .img-cena {
+                position: absolute;
+                right: 0;
+                width: 100%;
+                max-width: 150px;
+                background-color: #462302;
+                height: 60%;
+                background: url(../img/menu-img/cena-tlo.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 10px;
+                bottom: 10%;
+    
+                .img-cena-inner {
+                    background: url(../img/menu-img/cena-tlo-2.png);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-content: stretch;
+                    align-items: stretch;
+                    min-height: 100%;
+                    .logo {
+                        order: 0;
+                        flex: 0 50%;
+                        align-self: center;
+                        padding: 3px 3px 3px 3px;
+                        img {
+                            width: 80px;
+                        }
+                    }
+                    .linia {
+                        order: 1;
+                        align-self: center;
+                        width: 80%;
+                        border-bottom: 1px solid rgba($color: #000000, $alpha: .7);
+                    }
+                    .cena {
+                        order: 2;
+                        flex: 1 0 50%;
+                        align-self: center;
+                        font-size: 20px !important;
+                        font-weight: bold;
+                        color: #210c00;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+    
+                
+            }
+        }
+        .opis {
+            align-items: center;
+            display: flex;
+            .img-opis {
+                color: white;
+                .title {
+                    font-size: 25px;
+                }
+    
+                button{
+                    display: inline-block;
+                    position: relative;
+                    background: none;
+                    border: 1px solid rgba(255, 255, 255, 0.09);
+                    color: #fff;
+                    font-size: 14px;
+                    cursor: pointer;
+                    margin-top: 25px;
+                    background: rgba(0,0,0,0.09);
+                  }
+                  span{
+                    display: block;
+                    padding: 10px 20px;
+                  }
+                  button::before, button::after{
+                    content:"";
+                    width: 10%;
+                    height: 2px;
+                    position: absolute;
+                    transition: all 0.2s linear;
+                    background: rgb(175, 175, 175);
+                  }
+                  
+                  span::before, span::after{
+                    content:"";
+                    width:2px;
+                    height:10%;
+                    position: absolute;
+                    transition: all 0.2s linear;
+                    background: rgb(175, 175, 175);
+                  }
+                  button:hover::before, button:hover::after{
+                    width: 100%;
+                  }
+                  button:hover span::before, button:hover span::after{
+                    height: 100%;
+                  }
+                  /*----- button 4 -----*/
+                    .btn-4::after{
+                        right:0;
+                        bottom: 0;
+                        transition-duration: 0.4s;
+                    }
+                    .btn-4 span::after{
+                        right:0;
+                        bottom: 0;
+                        transition-duration: 0.4s;
+                    }
+                    .btn-4::before{
+                        left: 0;
+                        top: 0;
+                        transition-duration: 0.4s;
+                    }
+                    .btn-4 span::before{
+                        left: 0;
+                        top: 0;
+                        transition-duration: 0.4s;
+                    }
+    
+            }
+        }
+    }
+}
 @media screen and (max-width: 992px){
     #menu {
         p.cat--header {
