@@ -9,11 +9,6 @@
 @import 'partials/footer';
 @import 'partials/gallery';
 
-@media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
-}
 
 
 
@@ -24,7 +19,7 @@ main {
   background-position: center top; 
   background-size: cover;
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   &:before {
 
     position: absolute;
@@ -41,4 +36,15 @@ main {
     transform: skewY(0deg);
 
 } 
+}
+
+@media screen and (max-width: 728px) {
+  main {
+    overflow-x: hidden;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
 }

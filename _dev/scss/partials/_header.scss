@@ -6,6 +6,17 @@ header {
     background-size: cover;
     background-attachment: fixed;
     z-index: 100;
+    .male-tlo {
+        height: 80px;
+        width: 100%;
+        background-image: url(../img/tlo-cale_maska.png);
+        background-repeat: no-repeat;
+        background-position: center top;
+        position: absolute;
+        background-size: cover;
+        bottom: -70px;
+        left: 0;
+    }
     #maska {
         background-color: #000;
         position: absolute;

@@ -187,7 +187,7 @@
 
             $('.jq-sec2').waypoint(function (direction) {
                 if (direction == "down") {
-                    $('.jq-sec2-o').addClass('animated bounceInRight');
+                    $('.jq-sec2-o').addClass('animated slideInRight');
                 }
             }, { offset: '80%;'
             });
@@ -215,7 +215,7 @@
 
             $('.jq-sec4').waypoint(function (direction) {
                 if (direction == "down") {
-                    $('.jq-sec4-g').addClass('animated bounceInRight');
+                    $('.jq-sec4-g').addClass('animated slideInRight');
                 }
             }, { offset: '80%;'
             });

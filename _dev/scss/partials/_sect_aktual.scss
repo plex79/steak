@@ -1,5 +1,6 @@
 #section-aktualnosci {
     padding-bottom: 150px;
+    position: relative;
     .about-large {
         position: relative;
         .news-text {
@@ -120,15 +121,12 @@
     // }
 }
 
-@media screen and (max-width: 992px){
-    #section-aktualnosci {
-        padding-bottom: 200px !important;
-    }
-}
+
 
 @media screen and (max-width: 768px){
     #section-aktualnosci {
         padding-bottom: 50px !important;
+
     }
     .news-text {
         position: relative !important;
@@ -145,6 +143,12 @@
         transition: .3s ease-in-out all;
     }
 }
+
+// @media screen and (max-width: 992px){
+//     #section-aktualnosci {
+//         padding-bottom: 200px !important;
+//     }
+// }
 
 @media screen and (max-width: 1200px){
     #section-aktualnosci {
